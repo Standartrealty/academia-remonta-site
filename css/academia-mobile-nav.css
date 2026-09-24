@@ -1,5 +1,9 @@
 @media (max-width: 767px) {
   body { padding-bottom: 94px !important; }
+  /* На мобильном используем одно меню — нижнюю панель. Убираем старый
+     полноэкранный попап Tilda, который конфликтует с ней. */
+  #rec1833915301, #nav1833915301, #nav1833915301marker,
+  a[href="#menuopen"] { display: none !important; }
   .ar-mobile-nav {
     position: fixed; inset: auto 0 0; z-index: 100000;
     display: grid; grid-template-columns: repeat(5, 1fr); align-items: end;
