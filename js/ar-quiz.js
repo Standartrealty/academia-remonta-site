@@ -38,7 +38,7 @@
     if (!steps[current].querySelector('input:checked')) { error.hidden = false; return; }
     if (current < steps.length - 1) { showStep(current + 1); return; }
     const answers = new FormData(form);
-    const message = `Здравствуйте! Хочу расчёт ремонта. Объект: ${answers.get('type')}. Площадь: ${answers.get('area')}. Работы: ${answers.get('work')}.`;
+    const message = `Здравствуйте! Хочу расчёт ремонта. Объект: ${answers.get('type')}. Площадь: ${answers.get('area')}. Город: ${answers.get('city')}.`;
     window.open(`https://wa.me/79896661088?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
   });
 })();
