@@ -154,3 +154,8 @@
 @media(max-width:767px) {
  .ar-offer__range { height:56%; }
 }
+@media(max-width:767px) {
+ .ar-offer__eyebrow { display:none; }
+ .ar-offer__inner { align-items:center; text-align:center; }
+ .ar-offer h1, .ar-offer__lead { width:100%; text-align:center; }
+}
