@@ -1,0 +1,66 @@
+/* New landing sections are separate from the exported Tilda blocks. */
+#rec1833915341 { display: none !important; }
+.ar-video-hero { position: relative; overflow: hidden; min-height: 520px; background: #222; color: #fff; font-family: 'TildaSans', Arial, sans-serif; }
+.ar-video-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.14) 85%), url('/images/tild6363-3365-4333-a165-653039666265____2026-01-26__181222.png') center 48% / cover no-repeat; }
+.ar-video-hero__inner { position: relative; max-width: 1200px; min-height: inherit; margin: auto; padding: 88px 40px 78px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; }
+.ar-video-hero__eyebrow { margin: 0 0 24px; font-size: 15px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.ar-video-hero h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 6vw, 82px); line-height: .98; letter-spacing: -.055em; font-weight: 600; }
+.ar-video-hero__subtitle { max-width: 620px; margin: 30px 0 0; font-size: clamp(19px, 2.3vw, 27px); line-height: 1.4; color: #e6e6e6; }
+.ar-video-hero__play { display: inline-flex; gap: 12px; align-items: center; margin-top: 32px; padding: 0; border: 0; color: #fff; background: none; font: 600 16px 'TildaSans', Arial, sans-serif; cursor: pointer; }
+.ar-video-hero__play span { display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; background: rgba(255,255,255,.15); }
+.ar-video-hero__play svg { width: 19px; height: 19px; fill: currentColor; margin-left: 3px; }
+.ar-video-hero__play:focus-visible { outline: 2px solid #ff700f; outline-offset: 5px; }
+.ar-video-hero__note { display: none; margin: 10px 0 0; font-size: 14px; color: #fff; }
+.ar-video-hero__note[aria-hidden="false"] { display: block; }
+.ar-benefits { max-width: 1240px; margin: 0 auto; padding: 96px 20px; font-family: 'TildaSans', Arial, sans-serif; box-sizing: border-box; }
+.ar-benefits__heading { margin: 0 0 10px; font-size: clamp(34px, 4.2vw, 54px); line-height: 1.05; letter-spacing: -.045em; color: #1b1b1b; }
+.ar-benefits__lead { margin: 0 0 32px; color: #666; font-size: 19px; }
+.ar-benefits__grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); grid-template-rows: 270px 210px; gap: 14px; }
+.ar-benefits__card { position: relative; overflow: hidden; border-radius: 24px; background: #faf7f4; box-shadow: 0 7px 30px rgba(35,26,17,.055); box-sizing: border-box; }
+.ar-benefits__card--gift { grid-column: span 2; color: #fff; background: #3b2417; }
+.ar-benefits__card--gift::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(25,14,7,.86), rgba(25,14,7,.08) 78%), url('/images/tild6662-3930-4734-b035-346136383233__img_1851.jpg') center / cover; }
+.ar-benefits__content { position: relative; z-index: 1; padding: 28px 30px; }
+.ar-benefits__card h3 { margin: 0; font-size: clamp(24px, 2.8vw, 37px); line-height: 1.08; letter-spacing: -.035em; }
+.ar-benefits__card p { margin: 10px 0 0; max-width: 270px; font-size: 17px; line-height: 1.35; }
+.ar-benefits__card--gift strong { color: #ff7619; }
+.ar-benefits__card--guarantee { background: #fff1e5; color: #171717; }
+.ar-benefits__card--guarantee .ar-benefits__content { display: flex; height: 100%; flex-direction: column; justify-content: center; padding-left: 36px; }
+.ar-benefits__card--guarantee .ar-benefits__number { color: #ff6d14; font-size: clamp(88px, 12vw, 144px); line-height: .75; font-weight: 700; letter-spacing: -.09em; }
+.ar-benefits__card--guarantee h3 { margin: 18px 0 0; font-size: 29px; }
+.ar-benefits__card--control { background: #f6f7f8; }
+.ar-benefits__card--payment { background: #fff7f0; }
+.ar-benefits__card--business { background: #fbf4ec; }
+.ar-benefits__card--control::after, .ar-benefits__card--payment::after, .ar-benefits__card--business::after { content: ''; position: absolute; right: 14px; bottom: 8px; width: 48%; height: 68%; background-size: contain; background-position: right bottom; background-repeat: no-repeat; }
+.ar-benefits__card--control::after { background-image: url('/images/tild3061-3339-4463-a464-623132393933__2025-12-09_162316.jpg'); }
+.ar-benefits__card--payment::after { background-image: url('/images/tild3033-3634-4761-b166-396164323239___.png'); }
+.ar-benefits__card--business::after { background-image: url('/images/tild3564-3332-4761-b564-656530343830___.png'); }
+.ar-benefits__card--control h3, .ar-benefits__card--payment h3, .ar-benefits__card--business h3 { font-size: 25px; }
+.ar-benefits__card--control p, .ar-benefits__card--payment p, .ar-benefits__card--business p { max-width: 52%; font-size: 16px; }
+@media (max-width: 767px) {
+  .ar-video-hero { min-height: 590px; }
+  .ar-video-hero::before { background: linear-gradient(180deg, rgba(0,0,0,.12) 5%, rgba(0,0,0,.85) 75%), url('/images/tild6363-3365-4333-a165-653039666265____2026-01-26__181222.png') center / cover; }
+  .ar-video-hero__inner { padding: 38px 24px 54px; }
+  .ar-video-hero__eyebrow { font-size: 12px; margin-bottom: 18px; }
+  .ar-video-hero h1 { font-size: clamp(43px, 11vw, 68px); }
+  .ar-video-hero__subtitle { margin-top: 22px; font-size: 19px; }
+  .ar-benefits { padding: 66px 14px; }
+  .ar-benefits__lead { font-size: 16px; margin-bottom: 24px; }
+  .ar-benefits__grid { grid-template-columns: repeat(2, minmax(0,1fr)); grid-template-rows: auto; gap: 10px; }
+  .ar-benefits__card { min-height: 220px; border-radius: 18px; }
+  .ar-benefits__content { padding: 20px; }
+  .ar-benefits__card--gift { grid-column: span 2; min-height: 265px; }
+  .ar-benefits__card--gift::before { background: linear-gradient(90deg, rgba(25,14,7,.82), rgba(25,14,7,.2)), url('/images/tild6662-3930-4734-b035-346136383233__img_1851.jpg') center / cover; }
+  .ar-benefits__card--guarantee { min-height: 265px; }
+  .ar-benefits__card--guarantee .ar-benefits__content { padding: 20px; }
+  .ar-benefits__card--guarantee .ar-benefits__number { font-size: 92px; }
+  .ar-benefits__card--guarantee h3 { font-size: 22px; }
+  .ar-benefits__card--control { min-height: 265px; }
+  .ar-benefits__card--business { grid-column: span 2; }
+  .ar-benefits__card h3 { font-size: 24px; }
+  .ar-benefits__card p { font-size: 15px; }
+  .ar-benefits__card--control::after, .ar-benefits__card--payment::after { width: 72%; height: 42%; }
+  .ar-benefits__card--business::after { width: 44%; height: 82%; }
+  .ar-benefits__card--control p, .ar-benefits__card--payment p { max-width: 100%; }
+  .ar-benefits__card--business p { max-width: 48%; }
+}
+@media (min-width: 768px) and (max-width: 1000px) { .ar-benefits__grid { grid-template-rows: 250px 230px; } }
