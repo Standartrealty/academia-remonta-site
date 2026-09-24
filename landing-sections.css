@@ -159,3 +159,18 @@
  .ar-offer__inner { align-items:center; text-align:center; }
  .ar-offer h1, .ar-offer__lead { width:100%; text-align:center; }
 }
+
+/* City selection for the dynamic first-screen offer. */
+.ar-offer__city-switcher { position:relative; margin:-12px 0 20px; pointer-events:auto; }
+.ar-offer__city-trigger { padding:4px 0; border:0; border-bottom:1px solid currentColor; background:none; color:#f6e7d1; font:500 14px 'TildaSans',Arial,sans-serif; cursor:pointer; }
+.ar-offer__city-options { position:absolute; left:0; top:calc(100% + 8px); z-index:8; min-width:180px; padding:6px; border:1px solid rgba(255,255,255,.2); border-radius:9px; background:#242424; box-shadow:0 12px 28px rgba(0,0,0,.4); text-align:left; }
+.ar-offer__city-options[hidden] { display:none; }
+.ar-offer__city-options button { display:block; width:100%; padding:10px 12px; border:0; border-radius:5px; background:transparent; color:white; font:500 15px 'TildaSans',Arial,sans-serif; text-align:left; cursor:pointer; }
+.ar-offer__city-options button:hover, .ar-offer__city-options button:focus-visible { background:#48413b; }
+@media(max-width:700px) {
+  .ar-offer__city-switcher { margin:-8px 0 14px; }
+  .ar-offer__city-trigger { font-size:13px; }
+  .ar-offer__city-options { left:50%; transform:translateX(-50%); }
+  .ar-offer h1 { max-width:520px; font-size:clamp(27px,7.4vw,39px); }
+  .ar-offer__lead { max-width:520px; }
+}
