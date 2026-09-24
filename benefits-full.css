@@ -1,0 +1,6 @@
+.ar-benefits-full { padding: 38px 20px 62px; background: #faf8f6; }
+.ar-benefits-full__art { width: min(100%, 1200px); aspect-ratio: 1063 / 848; margin: 0 auto; background-image: url('/images/advantages-original.png'); background-repeat: no-repeat; background-size: 144.4967% auto; background-position: 5.074% 57.955%; }
+@media (max-width: 767px) {
+  .ar-benefits-full { padding: 22px 0 52px; background: #fff; }
+  .ar-benefits-full__art { width: 100%; aspect-ratio: 338 / 805; background-size: 454.4379% auto; background-position: 95.159% 60.274%; }
+}
