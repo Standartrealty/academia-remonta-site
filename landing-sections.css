@@ -174,3 +174,17 @@
   .ar-offer h1 { max-width:520px; font-size:clamp(27px,7.4vw,39px); }
   .ar-offer__lead { max-width:520px; }
 }
+
+/* Compact mobile hero and continuous touch dragging. */
+.ar-offer__range { touch-action:pan-y; }
+@media(max-width:767px) {
+  .ar-offer { height:50svh; min-height:420px; max-height:500px; }
+  .ar-offer__inner { padding:18px 18px 28px; }
+  .ar-offer h1 { font-size:clamp(25px,6.8vw,34px); line-height:1.08; }
+  .ar-offer__lead { margin:9px 0 14px; font-size:14px; }
+  .ar-offer__city-switcher { margin:-6px 0 12px; }
+  .ar-offer__button { padding:13px 15px; font-size:15px; }
+  .ar-offer__hint { margin-top:7px; font-size:11px; }
+  .ar-offer__note { display:none; }
+  .ar-offer__shade { background:linear-gradient(180deg,rgba(9,10,11,.03) 0%,rgba(9,10,11,.06) 28%,rgba(9,10,11,.56) 53%,rgba(9,10,11,.94) 100%); }
+}
