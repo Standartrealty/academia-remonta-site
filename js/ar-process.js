@@ -8,7 +8,8 @@
  const steps = [...section.querySelectorAll('.ar-process__step')];
  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
  const mobile = matchMedia('(max-width: 700px)');
- let length = 0, pending = false, samples = [];
+ let length = 0, pending = false, samples = [], arrows = [];
+ const arrowGroup=document.createElementNS("http://www.w3.org/2000/svg","g");svg.append(arrowGroup);
  const elements = [section.querySelector('.ar-process__start .ar-process__anchor'), ...steps.map(s => s.querySelector('.ar-process__number')), section.querySelector('.ar-process__finish .ar-process__anchor')];
  function draw() {
   const box = route.getBoundingClientRect();
@@ -28,6 +29,16 @@
   }
   track.setAttribute('d',d);progress.setAttribute('d',d);length=progress.getTotalLength();progress.style.strokeDasharray=length;
   samples=[];for(let d=0;d<=length;d+=4)samples.push([d,progress.getPointAtLength(d).y]);
+  arrowGroup.replaceChildren();arrows=[];
+  const obstacles=[...route.querySelectorAll('.ar-process__card,.ar-process__photo,figure')].map(el=>{const r=el.getBoundingClientRect();return {l:r.left-box.left-12,r:r.right-box.left+12,t:r.top-box.top-12,b:r.bottom-box.top+12};});
+  for(let target=length/9;target<length;target+=length/7){
+   for(let d=target;d<Math.min(length,target+100);d+=10){
+    const p=progress.getPointAtLength(d);
+    if(obstacles.some(r=>p.x>r.l&&p.x<r.r&&p.y>r.t&&p.y<r.b))continue;
+    const before=progress.getPointAtLength(Math.max(0,d-2));
+    const a=document.createElementNS('http://www.w3.org/2000/svg','path');a.setAttribute('d','M-6,-4 L0,0 L-6,4');a.setAttribute('stroke','#ff790f');a.setAttribute('transform',`translate(${p.x} ${p.y}) rotate(${Math.atan2(p.y-before.y,p.x-before.x)*180/Math.PI})`);arrowGroup.append(a);arrows.push([d,a]);break;
+   }
+  }
   update();
  }
  function update(){
@@ -41,6 +52,7 @@
   else for(const [d,y] of samples){if(y<=cursor-r.top)visible=d;}
   if(fraction===1)visible=length;
   progress.style.strokeDashoffset=length-visible;
+  arrows.forEach(([d,a])=>a.style.opacity=d<=visible?1:0);
   steps.forEach(step=>step.classList.toggle('is-reached', reduced.matches || step.querySelector('.ar-process__number').getBoundingClientRect().top<cursor));
  }
  function scroll(){if(!pending){pending=true;requestAnimationFrame(update);}}
