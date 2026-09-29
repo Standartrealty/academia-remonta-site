@@ -432,7 +432,7 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     .ar-geo__intro{font-size:clamp(17px,1.45vw,21px);line-height:1.4;color:#58606a;max-width:405px;margin:0}
     .ar-geo__pin{width:15px;height:15px;padding:0;border:2px solid white;border-radius:50%;background:#fa4e0a;box-shadow:0 1px 5px rgba(50,40,20,.25);cursor:pointer;transition:scale .25s ease;outline-offset:3px}
     .ar-geo__pin:hover,.ar-geo__pin:focus-visible{scale:1.25}
-    .ar-geo__city{font:bold 15px Arial,sans-serif;color:#171b1d;white-space:nowrap;text-shadow:0 1px 3px #fff,0 -1px 3px #fff;pointer-events:none}
+    .ar-geo__marker--detail{display:block}.ar-geo__city{font:bold 15px Arial,sans-serif;color:#171b1d;white-space:nowrap;text-shadow:0 1px 3px #fff,0 -1px 3px #fff;pointer-events:none}
     .ar-geo .maplibregl-popup-content{border-radius:12px;padding:11px 15px;box-shadow:0 5px 18px rgba(0,0,0,.12);font:13px/1.4 Arial,sans-serif;color:#222}
     .ar-geo .maplibregl-popup-content strong{display:block;font-size:14px;margin-bottom:2px}
     .ar-geo__logos{background:#fbf9f5;border-radius:24px;margin-top:8px;padding:27px 0 30px;overflow:hidden}
@@ -451,8 +451,8 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     .ar-geo__fallback{position:absolute;inset:0;z-index:2;overflow:hidden;background:#d8e9ed}
     .ar-geo__fallback svg{display:block;width:100%;height:100%}
     .ar-geo__fallback-label{position:absolute;color:#313a3d;font:600 14px Arial,sans-serif;white-space:nowrap;text-shadow:0 1px 3px #fff,0 -1px 3px #fff}
-    .ar-geo__fallback-label--m{left:54%;top:35%}.ar-geo__fallback-label--k{left:67%;top:58%}.ar-geo__fallback-label--i{left:78%;top:78%}
-    .ar-geo__fallback-pin{position:absolute;display:block;width:15px;height:15px;padding:0;border:2px solid #fff;border-radius:50%;background:#fa4e0a;box-shadow:0 1px 5px #715f4f88;cursor:pointer;transform:translate(-50%,-50%);transition:scale .25s ease}
+    .ar-geo__fallback-label--m{left:43%;top:25%}.ar-geo__fallback-label--k{left:67%;top:52%}.ar-geo__fallback-label--i{left:77%;top:71%}
+    .ar-geo__fallback-pin{position:absolute;left:var(--dx);top:var(--dy);display:block;width:15px;height:15px;padding:0;border:2px solid #fff;border-radius:50%;background:#fa4e0a;box-shadow:0 1px 5px #715f4f88;cursor:pointer;transform:translate(-50%,-50%);transition:scale .25s ease}
     .ar-geo__fallback-pin:hover,.ar-geo__fallback-pin:focus{scale:1.22;z-index:3}
     .ar-geo__fallback-pin span{display:none;position:absolute;left:16px;bottom:14px;width:max-content;max-width:175px;border-radius:10px;background:#fff;color:#303438;box-shadow:0 5px 15px #0002;padding:8px 11px;font:12px/1.35 Arial,sans-serif;text-align:left}
     .ar-geo__fallback-pin:hover span,.ar-geo__fallback-pin:focus span{display:block}
@@ -460,7 +460,7 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     .ar-geo__fallback-credit a{color:inherit;text-decoration:none}
     .ar-geo__map.is-ready .ar-geo__fallback{display:none}
     @media(max-width:1199px){.ar-geo__map-card{height:auto;display:flex;flex-direction:column}.ar-geo__content{width:auto;padding:34px 36px 30px}.ar-geo .ar-geo__map{position:relative;inset:auto;height:460px;width:100%;order:2}.ar-geo__fade{display:none}.ar-geo__intro{max-width:650px}.ar-geo h2{max-width:650px}}
-    @media(max-width:767px){.ar-geo{padding:16px 0 72px}.ar-geo__wrap{padding:0 18px}.ar-geo__map-card{border-radius:23px}.ar-geo__content{padding:30px 23px 26px}.ar-geo__eyebrow{font-size:13px;margin-bottom:13px}.ar-geo h2{font-size:clamp(39px,10vw,54px);margin-bottom:15px}.ar-geo__intro{font-size:16px;line-height:1.39}.ar-geo .ar-geo__map{height:420px}.ar-geo__city{font-size:13px}.ar-geo__logos{margin-top:8px;padding:28px 0 27px}.ar-geo__logos-head{padding:0 20px;margin-bottom:20px}.ar-geo h3{font-size:24px}.ar-geo__logos-head p{font-size:14px}.ar-geo__logo{flex-basis:174px;height:117px;border-radius:17px}.ar-geo__group{gap:12px;padding-right:12px}.ar-geo__marquee:before,.ar-geo__marquee:after{width:17px}}
+    @media(max-width:767px){.ar-geo{padding:16px 0 72px}.ar-geo__wrap{padding:0 18px}.ar-geo__map-card{border-radius:23px}.ar-geo__content{padding:30px 23px 26px}.ar-geo__eyebrow{font-size:13px;margin-bottom:13px}.ar-geo h2{font-size:clamp(39px,10vw,54px);margin-bottom:15px}.ar-geo__intro{font-size:16px;line-height:1.39}.ar-geo .ar-geo__map{height:420px}.ar-geo__city{font-size:13px}.ar-geo__fallback-pin{left:var(--mx,var(--dx));top:var(--my,var(--dy))}.ar-geo__fallback-pin--detail,.ar-geo__marker--detail{display:none}.ar-geo__fallback-label--m{left:36%;top:27%}.ar-geo__fallback-label--k{left:64%;top:56%}.ar-geo__fallback-label--i{left:68%;top:73%}.ar-geo__logos{margin-top:8px;padding:28px 0 27px}.ar-geo__logos-head{padding:0 20px;margin-bottom:20px}.ar-geo h3{font-size:24px}.ar-geo__logos-head p{font-size:14px}.ar-geo__logo{flex-basis:174px;height:117px;border-radius:17px}.ar-geo__group{gap:12px;padding-right:12px}.ar-geo__marquee:before,.ar-geo__marquee:after{width:17px}}
     @media(prefers-reduced-motion:reduce){.ar-geo__pin{transition:none}}
   </style>
   <div class="ar-geo__wrap">
@@ -470,13 +470,27 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
         <div class="ar-geo__fallback">
           <svg viewBox="0 0 800 580" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="ar-geo-terrain" width="95" height="95" patternUnits="userSpaceOnUse"><path d="M-25 68Q5 24 26 60T77 44T122 37" fill="none" stroke="#a4aa93" stroke-width="15" opacity=".18"/><path d="M-16 80Q15 36 38 76T95 55" fill="none" stroke="#a5ac97" stroke-width="4" opacity=".21"/></pattern></defs><path d="M0 0H500C500 45 514 96 524 143C533 182 525 212 544 249C562 285 573 316 583 340C594 365 598 394 620 428C636 455 644 487 659 514C675 540 692 563 706 580H0Z" fill="#e8e4d8"/><path d="M0 0H500C500 45 514 96 524 143C533 182 525 212 544 249C562 285 573 316 583 340C594 365 598 394 620 428C636 455 644 487 659 514C675 540 692 563 706 580H0Z" fill="url(#ar-geo-terrain)" opacity=".24"/><path d="M500 0C500 45 514 96 524 143C533 182 525 212 544 249C562 285 573 316 583 340C594 365 598 394 620 428C636 455 644 487 659 514C675 540 692 563 706 580" fill="none" stroke="#f8f5ec" stroke-width="5" opacity=".8"/><g fill="none" stroke="#fff9eb" stroke-width="2" opacity=".65"><path d="M250 0C310 105 330 185 420 210S510 296 560 360S640 493 680 580"/><path d="M80 170C180 185 210 165 330 205S450 240 540 255"/><path d="M145 420C290 405 380 430 490 475S590 540 635 580"/><path d="M300 70C345 110 382 120 430 140S487 185 525 200"/></g><g fill="none" stroke="#a9ab9b" stroke-width="1" opacity=".35"><path d="M280 0C315 125 385 190 485 235S563 335 611 418"/><path d="M70 300C225 268 325 310 420 350S525 420 618 455"/><path d="M135 525C275 474 365 490 500 520"/></g></svg>
           <span class="ar-geo__fallback-label ar-geo__fallback-label--m">Махачкала</span><span class="ar-geo__fallback-label ar-geo__fallback-label--k">Каспийск</span><span class="ar-geo__fallback-label ar-geo__fallback-label--i">Избербаш</span>
-          <button class="ar-geo__fallback-pin" type="button" style="left:49%;top:35%" aria-label="ЖК Белгравия, Махачкала"><span><b>ЖК Белгравия</b><br>Махачкала</span></button>
-          <button class="ar-geo__fallback-pin" type="button" style="left:52%;top:40%" aria-label="Гемотест, Махачкала"><span><b>Гемотест</b><br>Махачкала</span></button>
-          <button class="ar-geo__fallback-pin" type="button" style="left:47%;top:43%" aria-label="ЖК Семейный, Махачкала"><span><b>ЖК Семейный</b><br>Махачкала</span></button>
-          <button class="ar-geo__fallback-pin" type="button" style="left:63%;top:59%" aria-label="Апарт-отель Санторини, Каспийск"><span><b>Апарт-отель Санторини</b><br>Каспийск</span></button>
-          <button class="ar-geo__fallback-pin" type="button" style="left:65%;top:64%" aria-label="Объект в Каспийске"><span><b>Объект в Каспийске</b><br>Ремонт и дизайн</span></button>
-          <button class="ar-geo__fallback-pin" type="button" style="left:75%;top:81%" aria-label="Объект в Избербаше"><span><b>Объект в Избербаше</b><br>Ремонт и дизайн</span></button>
-          <button class="ar-geo__fallback-pin" type="button" style="left:77%;top:86%" aria-label="Коттедж 103, Избербаш"><span><b>Коттедж 103</b><br>Избербаш</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:41.8%;--dy:12.0%;--mx:42.7%;--my:19.1%" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin ar-geo__fallback-pin--detail" type="button" style="--dx:49.0%;--dy:17.6%;" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:40.5%;--dy:18.2%;--mx:32.6%;--my:26.8%" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin ar-geo__fallback-pin--detail" type="button" style="--dx:40.1%;--dy:25.7%;" aria-label="ЖК Белгравия, Махачкала"><span><b>ЖК Белгравия</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:34.1%;--dy:29.6%;--mx:25.5%;--my:29.8%" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:48.7%;--dy:30.4%;--mx:43.6%;--my:32.9%" aria-label="Гемотест, Махачкала"><span><b>Гемотест</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:53.1%;--dy:30.7%;--mx:49.0%;--my:33.7%" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:59.5%;--dy:34.7%;--mx:57.0%;--my:39.2%" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:43.6%;--dy:36.0%;--mx:38.3%;--my:37.6%" aria-label="ЖК Семейный, Махачкала"><span><b>ЖК Семейный</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:58.2%;--dy:41.5%;--mx:54.9%;--my:44.2%" aria-label="Район города Махачкала, Махачкала"><span><b>Район города Махачкала</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:56.9%;--dy:45.3%;--mx:61.7%;--my:53.0%" aria-label="Район города Каспийск, Каспийск"><span><b>Район города Каспийск</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:63.8%;--dy:49.4%;--mx:57.0%;--my:53.0%" aria-label="Район города Каспийск, Каспийск"><span><b>Район города Каспийск</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:56.0%;--dy:51.2%;--mx:51.9%;--my:55.0%" aria-label="Район города Каспийск, Каспийск"><span><b>Район города Каспийск</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:60.5%;--dy:54.2%;--mx:60.2%;--my:59.1%" aria-label="Апарт-отель Санторини, Каспийск"><span><b>Апарт-отель Санторини</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin ar-geo__fallback-pin--detail" type="button" style="--dx:65.4%;--dy:54.8%;" aria-label="Район города Каспийск, Каспийск"><span><b>Район города Каспийск</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:65.2%;--dy:59.6%;--mx:60.5%;--my:65.2%" aria-label="Район города Каспийск, Каспийск"><span><b>Район города Каспийск</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:73.6%;--dy:61.3%;--mx:75.1%;--my:66.6%" aria-label="Объект в Каспийске, Каспийск"><span><b>Объект в Каспийске</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:74.1%;--dy:71.5%;--mx:63.5%;--my:78.2%" aria-label="Район города Каспийск, Каспийск"><span><b>Район города Каспийск</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin ar-geo__fallback-pin--detail" type="button" style="--dx:76.4%;--dy:80.0%;" aria-label="Объект в Избербаше, Избербаш"><span><b>Объект в Избербаше</b><br>Избербаш</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:82.9%;--dy:80.3%;--mx:77.7%;--my:85.9%" aria-label="Район города Избербаш, Избербаш"><span><b>Район города Избербаш</b><br>Избербаш</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="--dx:77.6%;--dy:84.0%;--mx:67.7%;--my:87.0%" aria-label="Коттедж 103, Избербаш"><span><b>Коттедж 103</b><br>Избербаш</span></button>
           <small class="ar-geo__fallback-credit"><a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a> · схематичная карта</small>
         </div>
       </div>
@@ -524,15 +538,29 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
       var map=new maplibregl.Map({container:mapEl,style:'https://tiles.openfreemap.org/styles/positron',center:[47.7,42.8],zoom:9,interactive:false,attributionControl:true});
       map.on('load',function(){map.getStyle().layers.forEach(function(layer){if(layer.type==='symbol')map.setLayoutProperty(layer.id,'visibility','none')});map.fitBounds([[47.30,42.42],[48.08,43.16]],{padding:20,duration:0});mapEl.classList.add('is-ready')});
       var spots=[
-        {city:'Махачкала',name:'ЖК Белгравия',type:'Жилой комплекс',at:[47.493,42.990]},
-        {city:'Махачкала',name:'Гемотест',type:'Коммерческий объект',at:[47.514,42.981]},
-        {city:'Махачкала',name:'ЖК Семейный',type:'Жилой комплекс',at:[47.482,42.974]},
-        {city:'Каспийск',name:'Апарт-отель Санторини',type:'Гостиничный объект',at:[47.638,42.884]},
-        {city:'Каспийск',name:'Объект в Каспийске',type:'Ремонт и дизайн',at:[47.651,42.870]},
-        {city:'Избербаш',name:'Объект в Избербаше',type:'Ремонт и дизайн',at:[47.865,42.573]},
-        {city:'Избербаш',name:'Коттедж 103',type:'Дизайн интерьера',at:[47.881,42.559]}
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.408,43.130]},
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.492,43.086],detail:true},
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.409,43.081]},
+        {city:'Махачкала',name:'ЖК Белгравия',type:'Жилой комплекс',at:[47.422,43.022],detail:true},
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.372,42.991]},
+        {city:'Махачкала',name:'Гемотест',type:'Коммерческий объект',at:[47.519,42.984]},
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.564,42.982]},
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.637,42.951]},
+        {city:'Махачкала',name:'ЖК Семейный',type:'Жилой комплекс',at:[47.481,42.941]},
+        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.640,42.897]},
+        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.636,42.867]},
+        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.714,42.834]},
+        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.640,42.820]},
+        {city:'Каспийск',name:'Апарт-отель Санторини',type:'Гостиничный объект',at:[47.693,42.797]},
+        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.742,42.792],detail:true},
+        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.752,42.754]},
+        {city:'Каспийск',name:'Объект в Каспийске',type:'Ремонт и дизайн',at:[47.839,42.740]},
+        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.868,42.660]},
+        {city:'Избербаш',name:'Объект в Избербаше',type:'Ремонт и дизайн',at:[47.911,42.593],detail:true},
+        {city:'Избербаш',name:'Район города Избербаш',type:'География работ',at:[47.977,42.590]},
+        {city:'Избербаш',name:'Коттедж 103',type:'Дизайн интерьера',at:[47.932,42.561]}
       ];
-      spots.forEach(function(spot){var button=document.createElement('button');button.type='button';button.className='ar-geo__pin';button.setAttribute('aria-label',spot.name+', '+spot.city);var wrap=document.createElement('div');wrap.appendChild(button);new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(spot.at).addTo(map);var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:14,maxWidth:'190px'}).setHTML('<strong>'+spot.name+'</strong>'+spot.type+' · '+spot.city);function open(){popup.setLngLat(spot.at).addTo(map)}function close(){popup.remove()}button.addEventListener('mouseenter',open);button.addEventListener('mouseleave',close);button.addEventListener('focus',open);button.addEventListener('blur',close);button.addEventListener('click',function(){if(popup.isOpen())close();else open()})});
+      spots.forEach(function(spot){var button=document.createElement('button');button.type='button';button.className='ar-geo__pin';button.setAttribute('aria-label',spot.name+', '+spot.city);var wrap=document.createElement('div');if(spot.detail)wrap.className='ar-geo__marker--detail';wrap.appendChild(button);new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(spot.at).addTo(map);var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:14,maxWidth:'190px'}).setHTML('<strong>'+spot.name+'</strong>'+spot.type+' · '+spot.city);function open(){popup.setLngLat(spot.at).addTo(map)}function close(){popup.remove()}button.addEventListener('mouseenter',open);button.addEventListener('mouseleave',close);button.addEventListener('focus',open);button.addEventListener('blur',close);button.addEventListener('click',function(){if(popup.isOpen())close();else open()})});
       [['Махачкала',[47.526,43.013]],['Каспийск',[47.672,42.887]],['Избербаш',[47.900,42.575]]].forEach(function(item){var label=document.createElement('span');label.className='ar-geo__city';label.textContent=item[0];new maplibregl.Marker({element:label,anchor:'left'}).setLngLat(item[1]).addTo(map)});
       new ResizeObserver(function(){map.resize();map.fitBounds([[47.30,42.42],[48.08,43.16]],{padding:20,duration:0})}).observe(mapEl);
     }catch(e){console.error('Geography map init:',e);mapEl.classList.remove('is-ready')}}
