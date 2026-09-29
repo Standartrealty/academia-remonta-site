@@ -448,10 +448,16 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     .ar-geo__group{display:flex;gap:14px;padding-right:14px;flex:none}
     .ar-geo__logo{display:grid;place-items:center;flex:0 0 210px;height:138px;border-radius:19px;background:#fff}
     .ar-geo__logo img{display:block;max-width:calc(100% - 12px);max-height:calc(100% - 12px);width:auto;height:auto;object-fit:contain;pointer-events:none}
-    .ar-geo__fallback{position:absolute;inset:0;background:linear-gradient(115deg,#eae6db 0%,#d3d9ca 61%,#badce8 61%,#bbdfec 100%)}
-    .ar-geo__fallback:after{content:'';position:absolute;inset:0;background:linear-gradient(111deg,transparent 45%,rgba(255,255,255,.5) 46%,transparent 47%);opacity:.45}
-    .ar-geo__fallback-label{position:absolute;z-index:1;color:#4a5357;font:600 13px Arial,sans-serif;left:54%;top:38%;text-align:center}
-    .ar-geo__fallback-label:nth-child(2){left:63%;top:58%}.ar-geo__fallback-label:nth-child(3){left:70%;top:80%}
+    .ar-geo__fallback{position:absolute;inset:0;z-index:2;overflow:hidden;background:#d8e9ed}
+    .ar-geo__fallback svg{display:block;width:100%;height:100%}
+    .ar-geo__fallback-label{position:absolute;color:#313a3d;font:600 14px Arial,sans-serif;white-space:nowrap;text-shadow:0 1px 3px #fff,0 -1px 3px #fff}
+    .ar-geo__fallback-label--m{left:54%;top:35%}.ar-geo__fallback-label--k{left:67%;top:58%}.ar-geo__fallback-label--i{left:78%;top:78%}
+    .ar-geo__fallback-pin{position:absolute;display:block;width:15px;height:15px;padding:0;border:2px solid #fff;border-radius:50%;background:#fa4e0a;box-shadow:0 1px 5px #715f4f88;cursor:pointer;transform:translate(-50%,-50%);transition:scale .25s ease}
+    .ar-geo__fallback-pin:hover,.ar-geo__fallback-pin:focus{scale:1.22;z-index:3}
+    .ar-geo__fallback-pin span{display:none;position:absolute;left:16px;bottom:14px;width:max-content;max-width:175px;border-radius:10px;background:#fff;color:#303438;box-shadow:0 5px 15px #0002;padding:8px 11px;font:12px/1.35 Arial,sans-serif;text-align:left}
+    .ar-geo__fallback-pin:hover span,.ar-geo__fallback-pin:focus span{display:block}
+    .ar-geo__fallback-credit{position:absolute;bottom:7px;right:10px;padding:3px 5px;border-radius:3px;background:#ffffffb8;font:10px Arial,sans-serif;color:#59626a}
+    .ar-geo__fallback-credit a{color:inherit;text-decoration:none}
     .ar-geo__map.is-ready .ar-geo__fallback{display:none}
     @media(max-width:1199px){.ar-geo__map-card{height:auto;display:flex;flex-direction:column}.ar-geo__content{width:auto;padding:34px 36px 30px}.ar-geo .ar-geo__map{position:relative;inset:auto;height:460px;width:100%;order:2}.ar-geo__fade{display:none}.ar-geo__intro{max-width:650px}.ar-geo h2{max-width:650px}}
     @media(max-width:767px){.ar-geo{padding:16px 0 72px}.ar-geo__wrap{padding:0 18px}.ar-geo__map-card{border-radius:23px}.ar-geo__content{padding:30px 23px 26px}.ar-geo__eyebrow{font-size:13px;margin-bottom:13px}.ar-geo h2{font-size:clamp(39px,10vw,54px);margin-bottom:15px}.ar-geo__intro{font-size:16px;line-height:1.39}.ar-geo .ar-geo__map{height:420px}.ar-geo__city{font-size:13px}.ar-geo__logos{margin-top:8px;padding:28px 0 27px}.ar-geo__logos-head{padding:0 20px;margin-bottom:20px}.ar-geo h3{font-size:24px}.ar-geo__logos-head p{font-size:14px}.ar-geo__logo{flex-basis:174px;height:117px;border-radius:17px}.ar-geo__group{gap:12px;padding-right:12px}.ar-geo__marquee:before,.ar-geo__marquee:after{width:17px}}
@@ -461,7 +467,18 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     <div class="ar-geo__map-card">
       <div class="ar-geo__content"><p class="ar-geo__eyebrow">ГЕОГРАФИЯ РАБОТ</p><h2 id="ar-geo-title">Наш опыт —<br>на карте</h2><p class="ar-geo__intro">Жилые комплексы, клиники, отели и коммерческие объекты, где наша команда уже выполняла работы.</p></div>
       <div class="ar-geo__map" id="ar-geo-map" role="group" aria-label="Карта работ в Махачкале, Каспийске и Избербаше">
-        <div class="ar-geo__fallback" aria-hidden="true"><span class="ar-geo__fallback-label">Махачкала</span><span class="ar-geo__fallback-label">Каспийск</span><span class="ar-geo__fallback-label">Избербаш</span></div>
+        <div class="ar-geo__fallback">
+          <svg viewBox="0 0 800 580" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="ar-geo-terrain" width="95" height="95" patternUnits="userSpaceOnUse"><path d="M-25 68Q5 24 26 60T77 44T122 37" fill="none" stroke="#a4aa93" stroke-width="15" opacity=".18"/><path d="M-16 80Q15 36 38 76T95 55" fill="none" stroke="#a5ac97" stroke-width="4" opacity=".21"/></pattern></defs><path d="M0 0H500C500 45 514 96 524 143C533 182 525 212 544 249C562 285 573 316 583 340C594 365 598 394 620 428C636 455 644 487 659 514C675 540 692 563 706 580H0Z" fill="#e8e4d8"/><path d="M0 0H500C500 45 514 96 524 143C533 182 525 212 544 249C562 285 573 316 583 340C594 365 598 394 620 428C636 455 644 487 659 514C675 540 692 563 706 580H0Z" fill="url(#ar-geo-terrain)"/><path d="M500 0C500 45 514 96 524 143C533 182 525 212 544 249C562 285 573 316 583 340C594 365 598 394 620 428C636 455 644 487 659 514C675 540 692 563 706 580" fill="none" stroke="#f8f5ec" stroke-width="5" opacity=".8"/><g fill="none" stroke="#fff9eb" stroke-width="2" opacity=".65"><path d="M250 0C310 105 330 185 420 210S510 296 560 360S640 493 680 580"/><path d="M80 170C180 185 210 165 330 205S450 240 540 255"/><path d="M145 420C290 405 380 430 490 475S590 540 635 580"/><path d="M300 70C345 110 382 120 430 140S487 185 525 200"/></g><g fill="none" stroke="#a9ab9b" stroke-width="1" opacity=".35"><path d="M280 0C315 125 385 190 485 235S563 335 611 418"/><path d="M70 300C225 268 325 310 420 350S525 420 618 455"/><path d="M135 525C275 474 365 490 500 520"/></g></svg>
+          <span class="ar-geo__fallback-label ar-geo__fallback-label--m">Махачкала</span><span class="ar-geo__fallback-label ar-geo__fallback-label--k">Каспийск</span><span class="ar-geo__fallback-label ar-geo__fallback-label--i">Избербаш</span>
+          <button class="ar-geo__fallback-pin" type="button" style="left:49%;top:35%" aria-label="ЖК Белгравия, Махачкала"><span><b>ЖК Белгравия</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="left:52%;top:40%" aria-label="Гемотест, Махачкала"><span><b>Гемотест</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="left:47%;top:43%" aria-label="ЖК Семейный, Махачкала"><span><b>ЖК Семейный</b><br>Махачкала</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="left:63%;top:59%" aria-label="Апарт-отель Санторини, Каспийск"><span><b>Апарт-отель Санторини</b><br>Каспийск</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="left:65%;top:64%" aria-label="Объект в Каспийске"><span><b>Объект в Каспийске</b><br>Ремонт и дизайн</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="left:75%;top:81%" aria-label="Объект в Избербаше"><span><b>Объект в Избербаше</b><br>Ремонт и дизайн</span></button>
+          <button class="ar-geo__fallback-pin" type="button" style="left:77%;top:86%" aria-label="Коттедж 103, Избербаш"><span><b>Коттедж 103</b><br>Избербаш</span></button>
+          <small class="ar-geo__fallback-credit"><a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a> · схематичная карта</small>
+        </div>
       </div>
       <div class="ar-geo__fade"></div>
     </div>
