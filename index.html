@@ -516,7 +516,7 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     rail.addEventListener('click',function(e){if(dragged){e.preventDefault();dragged=false}},true);
     rail.addEventListener('mouseenter',function(){hold=true});rail.addEventListener('mouseleave',function(){if(pointerX===null)hold=false});
     rail.addEventListener('focusin',function(){hold=true});rail.addEventListener('focusout',function(){hold=false});
-    rail.addEventListener('scroll',function(){if(pointerX===null&&hold)pauseUntil=Date.now()+5000});
+    rail.addEventListener('scroll',function(){normalize();if(pointerX===null&&hold)pauseUntil=Date.now()+5000});
     window.addEventListener('resize',function(){var old=groupWidth;measure();if(old&&groupWidth!==old)rail.scrollLeft=groupWidth});
     measure();requestAnimationFrame(frame);
     var mapEl=document.getElementById('ar-geo-map');
