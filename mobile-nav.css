@@ -70,3 +70,12 @@
   .ar-mobile-nav .ar-contact span { position: relative; }
 }
 @media (min-width: 768px) { .ar-mobile-nav, .ar-mobile-header { display: none; } }
+@media (max-width: 767px) {
+  .t450__menu {
+    max-height: calc(100vh - 96px);
+    max-height: calc(100dvh - 96px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
