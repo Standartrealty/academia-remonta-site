@@ -677,21 +677,11 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
         {city:'Махачкала',name:'ЖК Белгравия',type:'Жилой комплекс',at:[47.422,43.022],detail:true},
         {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.372,42.991]},
         {city:'Махачкала',name:'Гемотест',type:'Коммерческий объект',at:[47.519,42.984]},
-        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.564,42.982]},
-        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.637,42.951]},
         {city:'Махачкала',name:'ЖК Семейный',type:'Жилой комплекс',at:[47.481,42.941]},
-        {city:'Махачкала',name:'Район города Махачкала',type:'География работ',at:[47.640,42.897]},
         {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.636,42.867]},
-        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.714,42.834]},
         {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.640,42.820]},
         {city:'Каспийск',name:'Апарт-отель Санторини',type:'Гостиничный объект',at:[47.693,42.797]},
-        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.742,42.792],detail:true},
-        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.752,42.754]},
-        {city:'Каспийск',name:'Объект в Каспийске',type:'Ремонт и дизайн',at:[47.839,42.740]},
-        {city:'Каспийск',name:'Район города Каспийск',type:'География работ',at:[47.868,42.660]},
         {city:'Избербаш',name:'Объект в Избербаше',type:'Ремонт и дизайн',at:[47.911,42.593],detail:true},
-        {city:'Избербаш',name:'Район города Избербаш',type:'География работ',at:[47.977,42.590]},
-        {city:'Избербаш',name:'Коттедж 103',type:'Дизайн интерьера',at:[47.932,42.561]}
       ];
       spots.forEach(function(spot){var button=document.createElement('button');button.type='button';button.className='ar-geo__pin';button.setAttribute('aria-label',spot.name+', '+spot.city);var wrap=document.createElement('div');if(spot.detail)wrap.className='ar-geo__marker--detail';wrap.appendChild(button);new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(spot.at).addTo(map);var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:14,maxWidth:'190px'}).setHTML('<strong>'+spot.name+'</strong>'+spot.type+' · '+spot.city);function open(){popup.setLngLat(spot.at).addTo(map)}function close(){popup.remove()}button.addEventListener('mouseenter',open);button.addEventListener('mouseleave',close);button.addEventListener('focus',open);button.addEventListener('blur',close);button.addEventListener('click',function(){if(popup.isOpen())close();else open()})});
       [['Махачкала',[47.526,43.013]],['Каспийск',[47.672,42.887]],['Избербаш',[47.900,42.575]]].forEach(function(item){var label=document.createElement('span');label.className='ar-geo__city';label.textContent=item[0];new maplibregl.Marker({element:label,anchor:'left'}).setLngLat(item[1]).addTo(map)});
