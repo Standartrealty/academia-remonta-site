@@ -1,0 +1,4 @@
+estimate-app/node_modules
+estimate-app/.next
+estimate-app/out
+estimate-app/*.tsbuildinfo
